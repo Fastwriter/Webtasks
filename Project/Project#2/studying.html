@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style4.css">
+	<script src="script.js" defer></script>
+	<title>DO IT!</title>
+	<link rel="icon" href="logo.png" type="image/vnd.microsoft.ico"/>
+</head>
+<body>
+	<div class="header_main">
+	<a href="index.html"><img src="header_main.jpg" style="width: 500px; height: 237px;"/></a>
+	<img src="header2.jpg"/>
+	<div class="right"><img src="headerground1.jpg"/></div>
+	<div class="sign"><a href="index.html"><button class="signin">Sign out</button></a></div>
+	<div class="register"><a href="#">Registration</a></div>
+	</div>
+	<header>
+		<a href="#">START HERE!</a><a href="all_blogs.html">BLOG</a><a href="studying.html">STUDYING AREA</a><a href="impossible.html">IMPOSSIBLE LIST</a><a href="seaching.html"><img width="16.23px" height="15px" src="search.png"/></a>
+	</header>
+	<div class="all">
+	<div class="container">
+		<ul id="slides">
+			<li class="slide showing"><a href="#">Studying Tips</a><img src="s1.jpg" style="width:720px; height: 400px;"/><div id="by">by Thomas Frank</div></li>
+			<li class="slide"><a href="#">World Library</a><img src="s2.jpg" style="width:720px; height: 400px;"/><div id="by">by David Luiz</div></li>
+			<li class="slide"><a href="#">Dreyfus Model</a><img src="s3.jpg" style="width:720px; height: 400px;"/><div id="by">by Ransom Patterson</div></li>
+			<li class="slide"><a href="#">WEB Programming</a><img src="s4.jpg" style="width:720px; height: 400px;"/><div id="by">by Lisa Armstrong</div></li>
+			<li class="slide"><a href="#">Hardvard Lecture</a><img src="s5.png" style="width:720px; height: 400px;"/><div id="by">by Ashley Young</div></li>
+		</ul>
+		<div class="buttons">
+    		<button class="controls" id="previous" >&lt;</button>
+			<button class="controls" id="pause">&#10074;&#10074;</button>
+    		<button class="controls" id="next">&gt;</button>
+  		</div>
+	</div>
+		<div id="start">
+			<main id="container">
+			<div id="wrap">
+			<div class="group">
+			<div class="image"><img class="image1" src="http://images.media-allrecipes.com/userphotos/960x960/3879362.jpg"/></div>
+			<div class="context">
+			<div class="header"><a href="#">Roasted Chicken with Pan Gravy</a></div>
+			<div class="text">In this easy roast chicken recipe, onions, carrots and celery cook underneath and soak up the juices from the roasting bird. The delicious vegetables are then used to make easy, healthy gravy. Serve this dish with a big green salad with vinaigrette.</div>
+			<div class="price"><p><mark>20.99$</mark></p></div>
+			</div>
+			</div>
+
+			<div class="group">
+			<div class="image"><img class="image1" src="http://assets.eatingwell.com/sites/default/files/imagecache/standard/recipes/OT6961_0.JPG"/></div> <div class="context">
+			<div class="header"><a href="#">Healthy Snack: Baked Chickpea 'Nuts' Recipe</a></div>
+			<div class="text">Need a new slimming, healthy snack idea? This chickpea "nuts" recipe is an easy snack that will keep you satisfied between meals. Chickpeas are full of fiber and are a good vegetarian source of protein. When chickpeas are baked, they get crunchy like nuts. Try baked chickpeas with this healthy snack recipe.</div>
+			<div class="price"><p><mark>10.79$</mark></p></div>
+			</div>
+			</div>
+			</div>	
+			</main>
+		<footer>
+		<a href="#">ABOUT</a><a href="#">BLOG</a><a href="#">IMPOSSIBLE LIST</a><a href="#">ARCHIVE</a><a href="#">CONTACT</a>
+		</footer>
+		</div>
+	</div>
+</body>
+</html>
+
+<script>
+fetch("foods.json", {
+	//mode: "no-cors"
+	}).then(function(response) {
+	response.json().then(function(data) {
+	const container = document.querySelector("#wrap");
+	for (let element of data) {
+		const group = document.createElement("div");
+		group.classList.add("group");
+		const imgContainer = document.createElement("div");
+		imgContainer.classList.add("image");
+		const img = document.createElement("img");
+		img.classList.add("image1");
+		img.src = element.img;
+imgContainer.appendChild(img);
+group.appendChild(imgContainer);
+const context = document.createElement("div");
+context.classList.add("context");
+const header = document.createElement("div");
+header.classList.add("header");
+const a = document.createElement("a");
+a.href = element.href;
+a.textContent = element.title;
+header.appendChild(a);
+context.appendChild(header);
+const text = document.createElement("div");
+text.classList.add("text");
+text.textContent = element.description;
+context.appendChild(text);
+const price = document.createElement("div");
+price.classList.add("price");
+const p = document.createElement("p");
+const mark = document.createElement("mark");
+mark.textContent = element.price + "$";
+p.appendChild(mark);
+price.appendChild(p);
+context.appendChild(price);
+group.appendChild(context);
+container.appendChild(group);
+}
+});
+});
+</script>

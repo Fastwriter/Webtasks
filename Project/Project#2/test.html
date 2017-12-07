@@ -1,0 +1,356 @@
+<HTML>
+<meta charset="utf-8">
+<meta name="viewport" 
+ content="width=device-width, initial-scale=1">
+
+<TITLE> FAIRMONT HOTEL </TITLE>
+
+<style>
+nav{
+  	display: flex;
+  	justify-content: space-around;
+  	align-items: center;
+  	border: 2px;
+  	background-color: transparent;
+  	width: 50%;
+	position: fixed;
+	margin-left: 350px;
+	padding-right: 15px;}
+a:link {
+	color: #BDD1F0;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: "Snell Roundhand", Times, Serif;
+}
+a:visited {
+	color: #C4DDF2
+}
+a:hover {
+	-webkit-transform: scale(1.4);
+}
+.wrapper {
+  	position: relative; 
+}
+.content {
+  	padding-bottom: 0px;
+}
+.footer {
+  	position: absolute;
+ 	left: 0;
+  	bottom: 0;
+  	width: 100%;
+  	height: 80px;
+}
+#onee{
+	width:50px;
+	height:40px;
+	margin-left: 290px;
+}
+#twoo{
+	width:50px;
+	height:40px;
+	margin-left: 1090px;
+	margin-top: -42px;
+}
+hr{
+	height:5px;
+	width: 80%;
+}
+#footp{
+	margin-top: -30px;
+	color: ivory;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	font-family: "Snell Roundhand", Times, Serif;
+}
+body{
+	background-repeat:repeat no-repeat;
+
+
+}
+p{
+	position: relative;
+}
+#like{
+	 margin-left: 15px;
+	
+}
+
+
+#like:hover{
+	-webkit-transform: scale(1.2);
+}
+
+menu{
+	display: none;
+}
+
+.rooms{
+
+	display: flex;
+justify-content: center;
+	float: left;
+	width: 1000px;
+	height: 800px;
+	
+
+}
+
+#slides{
+    position: relative;
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+    height: 550px;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+   
+    margin-left: 300px;
+}
+
+.slide:nth-of-type(1){
+    background-image: url(номер1.jpg);
+    background-size: 800px 550px;
+}
+.slide:nth-of-type(2){
+    background: url(номер2.jpg);
+    background-size: 800px 550px;
+}
+.slide:nth-of-type(3){
+    background: url(номер3.jpg);
+    background-size: 800px 550px;
+}
+.slide:nth-of-type(4){
+    background: url(номер4.jpg);
+    background-size: 800px 550px;
+}
+.slide:nth-of-type(5){
+    background: url(номер5.jpg);
+    background-size: 800px 550px;
+}
+.controls{
+  background-color:rgba(0, 0, 0, 0.3);
+  color:white;
+  border: none;
+  
+  font-size: 10px;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  width: 35px;
+  height:25px;
+}
+
+.controls:hover,
+.controls:focus{
+  background: #eee;
+  color: #333;
+}
+
+.container{
+	width:100%;
+  height:700px; 
+}
+
+.buttons{
+	margin-left: 45%;
+  	position: absolute;
+  	z-index: 10;
+  	font-size: 0px;
+  	margin-top: 190px;
+}
+#price{
+	background-color: transparent;
+}
+
+@media screen and (max-width: 400px) {
+	body{
+		overflow: hidden;
+	}
+ 
+  	.wrapper{
+    	text-align: center;
+  	}
+  	body{
+    	width:100vw;
+    	height: 100vh;
+  	}
+ 	img{
+ 		width: 180px;
+ 		height: 150px;
+ 	}
+ 	table{
+ 		margin-top: 20px;
+ 		width: 400px;
+ 	}
+ 	#logoo{
+ 		width: 180px;
+ 		height: 70px;
+ 	}
+	menu{
+		display: block;
+		margin-top: 30px;
+		margin-left: 150px;
+		position: absolute;
+	}
+	header{
+		display: none;
+	}
+	#like{
+		display: none;
+	}
+}
+</style>
+<div class="container">
+	<img id="logoo" src="Fairmont_Logo.svg.png"></img>
+	<body background="backback.jpg">
+	<!--==
+ <div class="rooms">
+
+	<div id="imgdiv">
+		<img class="like1" src="like.png" onclick="changeImage()" width="25" height="20" ></img>
+		<a href="room1.html"><IMG src="номер1.jpg"  width="470" height="330" align='left'></IMG></a>
+	</div>
+
+	<div id="imgdiv">
+		<img class="like" src="like.png" onclick="changeImage()" width="25" height="20" ></img>
+		<a href="room2.html"><IMG src="номер2.jpg"  width="470" height="330" align='left'></IMG></a>
+	</div id="imgdiv">
+
+	<div id="imgdiv">
+		<img class="like" src="like.png" onclick="changeImage()" width="25" height="20" ></img>
+		<a href="room1.html"><IMG src="номер3.jpg"  width="470" height="330" align='left'></IMG></a>
+	</div>
+
+	<div id="imgdiv">
+		<img class="like" src="like.png" onclick="changeImage()" width="25" height="20" ></dmg>
+		<a href="room1.html"><IMG src="номер4.jpg"   width="470" height="330" align='left'></IMG></a>
+	</div>
+
+	<div id="imgdiv">
+		<img class="like" src="like.png" onclick="changeImage()" width="25" height="20" ></img>
+		<a href="room1.html"><IMG src="номер5.jpg"  width="470" height="330" align='left'></IMG></a>
+	</div>
+
+	<div id="imgdiv">
+		<img class="like" src="like.png" onclick="changeImage()" width="25" height="20" ></img>
+		<a href="room1.html"><IMG src="номер6.jpg"  width="470" height="330" align='left'></IMG></a>
+	</div>
+</div>
+
+-->
+
+		<ul id="slides">
+			<li class="slide showing"><a href="room1.html">King bedroom</a><img id="like" src="like.png"  width="25" height="20" ></img><div id="price">42000 тг</div></li>
+			<li class="slide"><a href="room2.html">Imperatrice bedroom</a><img id="like" src="like.png"  width="25" height="20" ></img><div id="price">48000 тг</div></li>
+			<li class="slide"><a href="room3.html">Single room</a><img id="like" src="like.png"  width="25" height="20" ></img><div id="price">41000 тг</div></li>
+			<li class="slide"><a href="room4.html">Family luxe</a><img id="like" src="like.png"  width="25" height="20" ></img><div id="price">57000 тг</div></li>
+			<li class="slide"><a href="room5.html">VIP room</a><img id="like" src="like.png"   width="25" height="20" ></img><div id="price">70000 тг</div></li>
+		</ul>
+		<div class="buttons">
+    		<button class="controls" id="previous" >&lt;</button>
+			<button class="controls" id="pause">&#10074;&#10074;</button>
+    		<button class="controls" id="next">&gt;</button>
+  		</div>
+	</body>
+</div>
+
+<div class="wrapper">
+  	<div class="content">
+  		<hr/>
+  		<IMG id="onee" src="logoSDU.png" width="50" height="40"></IMG>
+  		<p id="footp">
+  			This is the mid project from WEB. Made by Aisulu Bekbossynova 2EN04A
+ 		</p>
+ 			<IMG id="twoo" src="logoSDU.png" width="50" height="40"></IMG>
+  	</div>
+</div> 
+  
+  	
+
+
+
+<script type="text/javascript" >
+	function changeImage(event) {
+ 		var a = event.toElement.src.split('/');
+ 		if (a[a.length-1] == "like.png"){
+            event.toElement.src = "star.png";}
+        else{
+            event.toElement.src = "like.png";}
+        }
+
+    for (var i = 0; i < document.querySelector('#slides').querySelectorAll('#like').length; i++) {
+    	document.querySelector('#slides').querySelectorAll('#like')[i].addEventListener('click',changeImage);
+    }
+
+
+	var controls = document.querySelectorAll('.controls');
+	for(var i=0; i<controls.length; i++){
+    		controls[i].style.display = 'inline-block';}
+	var slides = document.querySelectorAll('#slides .slide');
+	var currentSlide = 0;
+	var slideInterval = setInterval(nextSlide,2000);
+	function nextSlide(){
+    	goToSlide(currentSlide+1);}
+	function previousSlide(){
+    	goToSlide(currentSlide-1);}
+	function goToSlide(n){
+    	slides[currentSlide].className = 'slide';
+    	currentSlide = (n+slides.length)%slides.length;
+    	slides[currentSlide].className = 'slide showing';}	
+
+	var playing = true;
+	var pauseButton = document.getElementById('pause');
+	function pauseSlideshow(){
+    	pauseButton.innerHTML = '&#9658;'; // play character
+    	playing = false;
+    	clearInterval(slideInterval);}
+
+	function playSlideshow(){
+    	pauseButton.innerHTML = '&#10074;&#10074;'; // pause character
+    	playing = true;
+    	slideInterval = setInterval(nextSlide,2000);}
+
+	pauseButton.onclick = function(){
+    	if(playing){ pauseSlideshow(); }
+    	else{ playSlideshow(); }};
+
+	var next = document.getElementById('next');
+	var previous = document.getElementById('previous');
+
+	next.onclick = function(){
+    	pauseSlideshow();
+    	nextSlide();};
+	previous.onclick = function(){
+    	pauseSlideshow();
+    	previousSlide();};
+
+
+</script>
+

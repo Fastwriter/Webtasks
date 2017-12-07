@@ -1,0 +1,420 @@
+header{
+	position: absolute;
+	top:0;
+	left: 0;
+	margin-top: 238px;
+	width: 100%;
+	display: flex;
+}
+body{
+	background-color: #696969;
+	display: flex;
+}
+header a{
+	text-align: center;
+	width: 20%;
+    background-color: #483D8B;
+    cursor: pointer;
+    padding: 18px 16px 18px;
+    font-size: 17px;
+	text-decoration: none;
+	color: white;
+}
+header a:hover, footer a:hover{
+    background-color: #777;
+}
+header a:active{
+	background-color: #777;
+}
+.header_main{
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.right{
+	position: relative;
+	display: flex;
+	width: 10%;
+}
+.signin{
+	background: #696969;
+	color: white;
+	border: none;
+	outline: solid;
+	font-size: 50px;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+.sign{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 60px 70px 0px 0px;
+}
+.register{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 150px 105px 0px 0px;
+}
+.register a{
+	font-size: 22px;
+}
+.middle{
+	position: relative;
+	margin-top: 286px;
+	margin-left: 25px;
+}
+.middle img{
+	opacity: 0.6;
+}
+.description{
+	position: absolute;
+	top: 0;
+	color: white;
+}
+.description h1{
+	font-size: 44px;
+	font-family: verdana;
+	border: 2px solid white;
+	padding: 5px;
+	width: 60%;
+	margin: 160px 0px 0px 260px;
+}
+.description blockquote{
+	font-size: 19px;
+	font-family: Courier New;
+	width: 60%;
+	margin: 33px 0px 0px 260px;
+}
+.all_links{
+	position: absolute;
+	margin: 0px 0px 4px 0px;
+	bottom: 0;
+	right: 0;
+	border: 0px solid grey;
+	background: grey;
+	padding-left: 775px;
+	padding-right: 105px;
+}
+.all_links h4{
+	font-family: georgia;
+	font-size: 14px;
+	color: white;
+	margin-left: 95px;
+}
+.links{
+	display: flex;
+}
+.links img{
+	padding: 3px 20px 15px 20px;
+	cursor: pointer;
+}
+.links img:hover{
+	opacity: 0.9;
+}
+.main_body{
+	display: flex;
+	margin-left: 80px;
+}
+.last_news{
+	margin-top: -170px;
+	position: relative;
+	background: white;
+}
+.news{
+	margin-left: 25px;
+	padding-right: 25px;
+}
+.news #name, .current_news .name{
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+.news #linked{
+	color: red;
+	text-decoration: none;
+}
+.news #linked:hover{
+	text-decoration: underline;
+}
+.news img{
+	padding-top: 20px;
+	cursor: pointer;
+}
+.news img:hover{
+	opacity: 0.9;
+}
+.news div{	
+	font-family: Century Gothic;
+	font-size: 15px;
+}
+.readin{
+	background: #696969;
+	color: white;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+.blog{
+	background: red;
+	color: white;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px 20px;
+	margin-left: 195px;
+}
+.popular_new{
+	margin-top: -4px;
+	background: #778899;
+	margin-right: 53px;
+	padding-left: 140px;
+	padding-right: 101px;
+}
+.popular_news{
+	margin-top: -4px;
+	background: #778899;
+	padding-left: 140px;
+	padding-right: 101px;
+}
+.post{
+	display: inline;
+}
+.post img:hover{
+	cursor: pointer;
+	opacity: 0.7;
+}
+.post h4{
+	margin-top: -4px;
+	text-decoration: none;
+	color: black;
+	font-family: verdana;
+	font-size: 17px;
+	padding: 10px;
+	background: white;
+}
+.post a{
+	text-decoration: none;
+	color: black;
+}
+.post a:hover{
+	color: red;
+}
+.bottom_blog{
+	margin-left: 0px;
+	margin-top: 76px;
+	position: absolute;
+	width: 98%;
+	display: flex;
+}
+.bottom{
+	display: flex;
+}
+footer{
+	position: absolute;
+	width: 66.8%;
+	display: flex;
+}
+footer a{
+	text-align: center;
+	width: 20%;
+    background-color: black;
+    cursor: pointer;
+    padding: 7px 8px;
+    font-size: 14px;
+	text-decoration: none;
+	color: white;
+}
+@media screen and (max-device-width: 768px){
+	header{
+	width: 100%;
+	display: flex;
+	}
+	header a{
+	margin-top: -15px;
+	padding-left: 105px;
+	padding-right: 105px;
+	text-align: center;
+	}
+	.news div{
+		font-family: Georgia;
+		font-size: 12px;
+	}
+	.description{
+		margin-left: 50px;
+	}
+	.description h1{
+		font-size: 32px;
+	}
+	.description blockquote{
+		font-size: 22px;
+	}
+	footer a{
+		padding-left: 61px;
+		padding-right: 61px;
+	}
+}
+.news_img{
+	margin-top: 280px;
+	margin-left: 80px;
+}
+.current_news{
+	margin-top: -130px;
+	position: relative;
+	background: white;
+}
+.name{
+	padding: 10px;
+}
+.update{
+	color: grey;
+	font-family: Andele Mono;
+	font-size: 14px;
+	margin-left: 25px;
+}
+#follow{
+	color: #4169E1;
+	margin-left: 5px
+}
+#follow a{
+	text-decoration: none;
+}
+.follows{
+	margin-top: 10px;
+	margin-left: 145px;
+	display: flex;
+}
+.posted{
+	display: flex;
+}
+#main_block{
+	font-size: 22px;
+	font-weight: bold;
+}
+.current_news blockquote, q{
+	font-size: 18px;
+}
+.post_img{
+	text-align: center;
+}
+.all{
+	display: relative;
+	margin-top: 285px;
+	margin-left: 200px;
+}
+.all div{
+	font-size: 30px;
+}
+.above{
+	background: white;
+	padding-top: 5px;
+	margin-top: -7px;
+}
+.blogger img, .above img:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}
+.blogger img:hover{
+	opacity: 0.9;
+}
+.above p{
+	font-size: 18px;
+}
+.above a{
+	text-decoration: none;
+	color: black;
+}
+.audi{
+	text-align: center;
+}
+.readmore{
+	background: red;
+	color: white;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+.user{
+	position: relative;
+}
+.user p{
+	margin-top: -5px;
+	margin-left: 3px;
+}
+.log{
+	display: flex;
+}
+.elements{
+	display: inline;
+	margin-top: 10px;
+	margin-left: 40px;
+}
+.foradd{
+	background: red;
+	color: white;
+	border: dotted;
+	outline: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+.buts{
+	margin-left: 15px;
+}
+.foredit{
+	margin-left: 30px;
+	background: green;
+	color: white;
+	border: dotted;
+	outline: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+#start{
+	background-color: white;
+	position: relative;
+	margin-top: -50px;
+}
+.editer{
+	display: flex;
+}
+.editfm{
+	margin-right: 50px;
+	background: green;
+	color: white;
+	border: dotted;
+	outline: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+.edit{
+	margin-left: 250px;
+	margin-right: 50px;
+	background: green;
+	color: white;
+	border: dotted;
+	outline: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+.delete{
+	margin-left: 50px;
+	background: red;
+	color: white;
+	border: dotted;
+	outline: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px 20px;
+}
